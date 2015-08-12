@@ -33,7 +33,7 @@ dependencies {
 }
 
 mainClassName = 'yose.Yose'
-applicationName = 'yose-molecule'
+applicationName = 'Yosethejava'
 
 run {
     if (!project.hasProperty('port')) ext.port = 8080
