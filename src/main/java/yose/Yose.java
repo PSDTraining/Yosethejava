@@ -67,7 +67,7 @@ public class Yose {
     	String[][] array = new String[8][8];
     	StringBuilder builder = new StringBuilder();
     	builder.append("<html>");
-    	builder.append("<input id=\"title\" type=\"text\" value=\"Minesweeper\">");
+    	builder.append("<h1 id=\"title\">Minesweeper</h1>");
     	builder.append("<p>&nbsp;</p>");
     	builder.append("<table style=\"border:1px solid #c5c5c5\">");
     	for(int x=0;x<array.length;x++){
