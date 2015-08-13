@@ -20,14 +20,33 @@ public class Yose {
 
         server.start(new DynamicRoutes() {{
         	
-        	get("/").to((request, response) -> response.body(frontPage()).addHeader("content-type", "text/html"));
+            get("/").to((request, response) -> response.body(frontPage()).addHeader("content-type", "text/html"));
             get("/ping").to(new Ping(gson)::pong);
             get("/primeFactors").to(new PowerOfTwo(gson)::prime);
             get("/minesweeper").to((request, response) -> response.body(mineSweeper()));
             get("/aboutme").to((request, response) -> response.body(aboutMe()));
+            get("/astroport").to((request, response) -> response.body(astroport()).addHeader("content-type", "text/html"));
         }});
     }
 
+    public String astroport(){
+        StringBuilder builder = new StringBuilder();
+        builder.append("<html>");
+        builder.append("<head>");
+        builder.append("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
+        builder.append("</head>");
+        builder.append("<p id=\"astroport-name\"></p>");
+        for(int x=1;x<4;x++){
+            builder.append("<div id=\"gate-"+x+"\">");
+                builder.append("<div id=\"ship-"+x+"\">");
+                    builder.append("Ship " + x);
+                builder.append("</div>");
+            builder.append("</div>");
+        }
+        builder.append("</html>");
+        return builder.toString();
+    }
+    
     public String frontPage(){
     	StringBuilder builder = new StringBuilder();
     	builder.append("<html>");

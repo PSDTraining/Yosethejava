@@ -3,3 +3,4 @@ build
 *.iml
 /bin/
 .class
+/.nb-gradle/
