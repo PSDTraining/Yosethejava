@@ -67,6 +67,9 @@ public class Yose {
     	String[][] array = new String[8][8];
     	StringBuilder builder = new StringBuilder();
     	builder.append("<html>");
+    	builder.append("<head>");
+		builder.append("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
+		builder.append("</head>");
     	builder.append("<h1 id=\"title\">Minesweeper</h1>");
     	builder.append("<p>&nbsp;</p>");
     	builder.append("<table style=\"border:1px solid #c5c5c5\">");
