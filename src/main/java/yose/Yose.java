@@ -20,7 +20,7 @@ public class Yose {
 
         server.start(new DynamicRoutes() {{
         	
-        	get("/").to((request, response) -> response.body("Hello Yose<br/>" + contactMeLink()));
+        	get("/").to((request, response) -> response.body(frontPage()));
             get("/ping").to(new Ping(gson)::pong);
             get("/primeFactors").to(new PowerOfTwo(gson)::prime);
 
@@ -28,9 +28,10 @@ public class Yose {
         }});
     }
 
-    public String contactMeLink(){
+    public String frontPage(){
     	StringBuilder builder = new StringBuilder();
     	builder.append("<html>");
+    	builder.append("Hello Yose <br/>");
     		builder.append("<a id=\"contact-me-link\" href=\"/aboutme\"/>Contact Information</a>");
     	builder.append("</html>");
     	return builder.toString();
