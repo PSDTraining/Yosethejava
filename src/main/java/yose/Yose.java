@@ -34,6 +34,7 @@ public class Yose {
     	builder.append("<head>");
 		builder.append("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
 		builder.append("</head>");
+		builder.append("<p></p>");
     	builder.append("Hello Yose <br/>");
     		builder.append("<a id=\"contact-me-link\" href=\"/aboutme\"/>Contact Information</a><br>");
     		builder.append("<a id=\"ping-challenge-link\" href=\"/ping\"/>Ping</a>");
