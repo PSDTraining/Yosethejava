@@ -1,1 +1,1 @@
-web: ./build/install/yose-molecule/bin/yose-molecule $PORT
+web: ./build/install/Yosethejava/bin/Yosethejava $PORT

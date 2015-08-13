@@ -20,14 +20,10 @@ public class Yose {
 
         server.start(new DynamicRoutes() {{
         	
-//            get("/").to((request, response) -> response.body(contactMeLink()));
         	get("/").to((request, response) -> response.body("Hello Yose<br/>" + contactMeLink()));
             get("/ping").to(new Ping(gson)::pong);
-<<<<<<< HEAD
             get("/primeFactors").to(new PowerOfTwo(gson)::prime);
-=======
-            //get("/primeFactors?number=16").to(new PowerOfTwo(gson, 16));
->>>>>>> origin/master
+
             get("/aboutme").to((request, response) -> response.body(aboutMe()));
         }});
     }
