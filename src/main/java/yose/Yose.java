@@ -20,10 +20,10 @@ public class Yose {
 
         server.start(new DynamicRoutes() {{
         	
-        	get("/").to((request, response) -> response.body(frontPage()));
+        	get("/").to((request, response) -> response.body(frontPage() ));
             get("/ping").to(new Ping(gson)::pong);
             get("/primeFactors").to(new PowerOfTwo(gson)::prime);
-
+            get("/minesweeper").to((request, response) -> response.body(mineSweeper()));
             get("/aboutme").to((request, response) -> response.body(aboutMe()));
         }});
     }
@@ -32,10 +32,12 @@ public class Yose {
     	StringBuilder builder = new StringBuilder();
     	builder.append("<html>");
     	builder.append("Hello Yose <br/>");
-    		builder.append("<a id=\"contact-me-link\" href=\"/aboutme\"/>Contact Information</a>");
+    		builder.append("<a id=\"contact-me-link\" href=\"/aboutme\"/>Contact Information</a><br>");
+    		builder.append("<a id=\"ping-challenge-link\" href=\"/ping\"/>Ping</a>");
     	builder.append("</html>");
     	return builder.toString();
     }
+    
     
     public String aboutMe(){
     	StringBuilder builder = new StringBuilder();
@@ -57,6 +59,31 @@ public class Yose {
 				builder.append("</td>");
 			builder.append("</tr>");
     		builder.append("</table>");
+    	builder.append("</html>");
+    	return builder.toString();
+    }
+    
+    public String mineSweeper(){
+    	String[][] array = new String[8][8];
+    	StringBuilder builder = new StringBuilder();
+    	builder.append("<html>");
+    	builder.append("<input id=\"title\" type=\"text\" value=\"Minesweeper\">");
+    	builder.append("<p>&nbsp;</p>");
+    	builder.append("<table style=\"border:1px solid #c5c5c5\">");
+    	for(int x=0;x<array.length;x++){
+    		builder.append("<tr>");
+    			for(int y=0;y<array[x].length;y++){
+    				builder.append("<td style=\"border:1px solid #c5c5c5;border-collapse:collapse\" id=\"cell-");
+    				builder.append((x+1)+ "x");
+    				builder.append((y+1)+ "\">");
+    				builder.append(x+1);
+    				builder.append("x");
+    				builder.append(y+1);
+    				builder.append("</td>");
+    			}
+    		builder.append("</tr>");
+    	}
+    	builder.append("</table>");
     	builder.append("</html>");
     	return builder.toString();
     }

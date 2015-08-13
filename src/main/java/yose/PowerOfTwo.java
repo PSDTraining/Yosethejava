@@ -36,7 +36,7 @@ public class PowerOfTwo {
 				}
 			}
 		}
-        response.contentType(JSON).body(result.toString());
+        response.contentType(JSON).body(gson.toJson(result));
     }
 	
 	public static class Prime {
