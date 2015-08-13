@@ -20,7 +20,7 @@ public class Yose {
 
         server.start(new DynamicRoutes() {{
         	
-        	get("/").to((request, response) -> response.body(frontPage() ));
+        	get("/").to((request, response) -> response.body(frontPage()).addHeader("content-type", "text/html"));
             get("/ping").to(new Ping(gson)::pong);
             get("/primeFactors").to(new PowerOfTwo(gson)::prime);
             get("/minesweeper").to((request, response) -> response.body(mineSweeper()));
