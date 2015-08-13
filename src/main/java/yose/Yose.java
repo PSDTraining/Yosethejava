@@ -22,7 +22,7 @@ public class Yose {
         	
             get("/").to((request, response) -> response.body(contactMeLink()));
             get("/ping").to(new Ping(gson)::pong);
-            get("/primeFactors?number=16").to(new PowerOfTwo(gson, 16)::prime);
+            //get("/primeFactors?number=16").to(new PowerOfTwo(gson, 16));
             get("/aboutme").to((request, response) -> response.body(aboutMe()));
         }});
     }
