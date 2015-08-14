@@ -6,6 +6,7 @@ import com.vtence.molecule.routing.DynamicRoutes;
 
 import java.io.IOException;
 import java.net.URI;
+import java.util.Random;
 
 public class Yose {
 
@@ -93,14 +94,24 @@ public class Yose {
     	builder.append("<html>");
     	builder.append("<head>");
 		builder.append("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
+		builder.append("<script type=\"text/css\">");
+		builder.append(".lost{");
+		builder.append("background-color:red");
+		builder.append("}");
+		builder.append("</script>");
 		builder.append("</head>");
     	builder.append("<h1 id=\"title\">Minesweeper</h1>");
     	builder.append("<p>&nbsp;</p>");
     	builder.append("<table style=\"border:1px solid #c5c5c5\">");
     	for(int x=0;x<array.length;x++){
     		builder.append("<tr>");
+    		Random random = new Random();
+    			int randomNumber = random.nextInt(8);
     			for(int y=0;y<array[x].length;y++){
     				builder.append("<td style=\"border:1px solid #c5c5c5;border-collapse:collapse\" id=\"cell-");
+    				if(randomNumber == (y+1)){
+    					builder.append(" class=\"lost\"");
+    				}
     				builder.append((x+1)+ "x");
     				builder.append((y+1)+ "\">");
     				builder.append(x+1);
