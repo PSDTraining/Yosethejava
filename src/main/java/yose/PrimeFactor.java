@@ -38,7 +38,7 @@ public class PrimeFactor {
 						number = number / 2;
 					} else {
 						int evenNumber = 3;
-						while (evenNumber <= 9) {
+						while (evenNumber <= returnNumber) {
 
 							if (number % evenNumber == 0) {
 								decomposition.add(evenNumber);
