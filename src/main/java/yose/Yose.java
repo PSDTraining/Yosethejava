@@ -119,7 +119,7 @@ public class Yose {
 //    					builder.append(" class=\"lost\" ");
     					builder.append(" onclick=\"load('cell-");
     					builder.append((x+1)+ "x");
-        				builder.append((y+1)+"\"')");
+        				builder.append((y+1)+"'\")");
     				}
     				builder.append(" id=\"cell-");
     				builder.append((x+1)+ "x");
