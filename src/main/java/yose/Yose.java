@@ -102,7 +102,9 @@ public class Yose {
 		builder.append("<script type=\"text/javascript\">");
 		builder.append("function load(id){");
 //		builder.append("background-color:red");
+		builder.append("alert(\"id\") ");
 		builder.append("document.getElementById(id).className = \"lost\";");
+		
 		builder.append("}");
 		builder.append("</script>");
 		builder.append("</head>");
