@@ -99,6 +99,12 @@ public class Yose {
 		builder.append("background-color:red");
 		builder.append("}");
 		builder.append("</script>");
+		builder.append("<script type=\"text/javascript\">");
+		builder.append("function load(id){");
+//		builder.append("background-color:red");
+		builder.append("document.getElementById(id).className = \"lost\";");
+		builder.append("}");
+		builder.append("</script>");
 		builder.append("</head>");
     	builder.append("<h1 id=\"title\">Minesweeper</h1>");
     	builder.append("<p>&nbsp;</p>");
@@ -110,7 +116,10 @@ public class Yose {
     			for(int y=0;y<array[x].length;y++){
     				builder.append("<td style=\"border:1px solid #c5c5c5;border-collapse:collapse\"");
     				if(randomNumber == (y+1)){
-    					builder.append(" class=\"lost\"");
+//    					builder.append(" class=\"lost\" ");
+    					builder.append(" onclick=\"load('cell-");
+    					builder.append((x+1)+ "x");
+        				builder.append((y+1)+"')\"");
     				}
     				builder.append(" id=\"cell-");
     				builder.append((x+1)+ "x");
