@@ -44,7 +44,6 @@ public class Yose {
                 builder.append("</div>");
             builder.append("</div>");
         }
-        builder.append("<br/>");
         builder.append("</html>");
         return builder.toString();
     }
@@ -102,7 +101,8 @@ public class Yose {
 		builder.append("<script type=\"text/javascript\">");
 		builder.append("function load(id){");
 //		builder.append("background-color:red");
-		builder.append("document.getElementById(id).className = \"lost\";");
+		builder.append("alert(id);");		
+		builder.append("document.getElementById(id).className = \"lost\";");		
 		builder.append("}");
 		builder.append("</script>");
 		builder.append("</head>");
