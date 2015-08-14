@@ -43,6 +43,7 @@ public class Yose {
                 builder.append("</div>");
             builder.append("</div>");
         }
+        builder.append("<br/>");
         builder.append("</html>");
         return builder.toString();
     }
