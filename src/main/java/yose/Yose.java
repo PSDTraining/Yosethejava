@@ -25,11 +25,11 @@ public class Yose {
             get("/primeFactors").to(new PowerOfTwo(gson)::prime);
             get("/minesweeper").to((request, response) -> response.body(mineSweeper()));
             get("/aboutme").to((request, response) -> response.body(aboutMe()));
-            get("/astroport").to((request, response) -> response.body(astroport()).addHeader("content-type", "text/html"));
+            get("/astroport").to((request, response) -> response.body(theAstroport()).addHeader("content-type", "text/html"));
         }});
     }
 
-    public String astroport(){
+    public String theAstroport(){
         StringBuilder builder = new StringBuilder();
         builder.append("<html>");
         builder.append("<head>");
