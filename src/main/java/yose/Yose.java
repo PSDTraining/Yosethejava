@@ -23,7 +23,7 @@ public class Yose {
         	
             get("/").to((request, response) -> response.body(frontPage()).addHeader("content-type", "text/html"));
             get("/ping").to(new Ping(gson)::pong);
-            get("/primeFactors").to(new PowerOfTwo(gson)::prime);
+            get("/primeFactors").to(new PrimeFactor(gson)::prime);
             get("/minesweeper").to((request, response) -> response.body(mineSweeper()));
             get("/aboutme").to((request, response) -> response.body(aboutMe()));
             get("/astroport").to((request, response) -> response.body(theAstroport()).addHeader("content-type", "text/html"));
