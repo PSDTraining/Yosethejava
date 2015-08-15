@@ -46,7 +46,7 @@ public class Yose {
 		builder.append("<form enctype='multipart/form-data' action='/primeFactors/' method='get'>");
 //		builder.append("<form action=\"http://yosejava.herokuapp.com/primeFactors/\" method=\"post\">");
 		builder.append("<input id=\"number\" name=\"number\"/>");
-		builder.append("<input type=\"submit\" id=\"go\" value=\"Go\"/>");
+		builder.append("<input type=\"submit\" id=\"go\" value=\"go\"/>");
 		builder.append("</form>");
 		 builder.append("</html>");
 		
