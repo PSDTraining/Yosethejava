@@ -22,11 +22,9 @@ public class PrimeFactor {
 	}
 
 	public void prime(Request request, Response response) {
-		// String number = request.parameter("number");
-
 		
-		if (request.parameter("number") != null) {
-			
+//		if (request.parameter("number") != null) {
+		if(request.allParameters()!=null){
 			
 			String numString = request.parameter("number");
 			try {
