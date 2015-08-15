@@ -7,6 +7,7 @@ import com.vtence.molecule.Request;
 import com.vtence.molecule.Response;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class PrimeFactor {
 
@@ -22,7 +23,10 @@ public class PrimeFactor {
 	public void prime(Request request, Response response) {
 		// String number = request.parameter("number");
 
+		
 		if (request.parameter("number") != null) {
+			
+			
 			String numString = request.parameter("number");
 			try {
 
@@ -56,7 +60,7 @@ public class PrimeFactor {
 
 				}
 
-				response.contentType(JSON).body(gson.toJson(new Prime(2, decomposition)));
+				response.contentType(JSON).body(gson.toJson(new Prime(2, decomposition, request.allParameters())));
 			} catch (NumberFormatException e) {
 				response.contentType(JSON).body(gson.toJson(new PrimeError(numString)));
 			} catch (IllegalArgumentException ex){
@@ -69,10 +73,13 @@ public class PrimeFactor {
 	public static class Prime {
 		private int number;
 		private List<Integer> decomposition;
+		private Map<String, List<String>> param;
+		
 
-		public Prime(int number, List<Integer> decomposition) {
+		public Prime(int number, List<Integer> decomposition, Map<String, List<String>> param) {
 			this.number = number;
 			this.decomposition = decomposition;
+			this.param = param;
 		}
 		
 	}
