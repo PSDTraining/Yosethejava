@@ -24,7 +24,7 @@ public class Yose {
             get("/").to((request, response) -> response.body(frontPage()).addHeader("content-type", "text/html"));
             get("/ping").to(new Ping(gson)::pong);
             get("/primeFactors").to(new PrimeFactor(gson)::prime);
-            get("/primeFactors/ui").to((request, response) -> response.body(primeFactorUI()).addHeader("content-type", "text/html")::prime);
+            get("/primeFactors/ui").to((request, response) -> response.body(primeFactorUI()).addHeader("content-type", "text/html"));
             
             get("/minesweeper").to((request, response) -> response.body(mineSweeper()));
             get("/aboutme").to((request, response) -> response.body(aboutMe()));
@@ -42,7 +42,7 @@ public class Yose {
 		builder.append("<br>");
 		builder.append("<p id=\"invitation\">Insert a number<p>");
 		builder.append("<form action=\"http://yosejava.herokuapp.com/primeFactors/\" method=\"post\">");
-		builder.append("<input id=\"name\" name=\"number\"/>");
+		builder.append("<input id=\"number\" name=\"number\"/>");
 		builder.append("<input type=\"submit\" id=\"go\" value=\"go\"/>");
 		builder.append("</form>");
 		 builder.append("</html>");
