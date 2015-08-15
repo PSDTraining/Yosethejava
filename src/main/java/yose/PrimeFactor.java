@@ -71,7 +71,8 @@ public class PrimeFactor {
 							}
 
 							
-							listDecomposition.add(new Prime(returnNumber, decomposition));
+//							listDecomposition.add(new Prime(returnNumber, decomposition));
+							listDecomposition.add(new Prime(2, decomposition));
 						} catch (NumberFormatException e) {
 							response.contentType(JSON).body(gson.toJson(new PrimeError(numString)));
 						} catch (IllegalArgumentException ex){
