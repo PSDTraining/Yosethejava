@@ -43,9 +43,9 @@ public class PrimeFactor {
 						int returnNumber = number;
 						decomposition = new ArrayList<Integer>();
 						
-//						if(number> 1000000){
-//							throw new IllegalArgumentException();
-//						}
+						if(number> 1000000){
+							throw new IllegalArgumentException();
+						}
 
 						while (number != 1) {
 
@@ -68,7 +68,7 @@ public class PrimeFactor {
 
 						}
 						
-						listDecomposition.add(new Prime(5, decomposition));
+						listDecomposition.add(new Prime(returnNumber, decomposition));
 
 					} catch (NumberFormatException e) {
 						listDecomposition.add(new PrimeError(value));
