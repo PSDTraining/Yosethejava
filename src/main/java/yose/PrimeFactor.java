@@ -36,9 +36,11 @@ public class PrimeFactor {
 			
 				for (String value : values) {
 					
-//					try {
+					try {
 						
 						number = Integer.parseInt(value);
+						
+						
 						int returnNumber = number;
 						decomposition = new ArrayList<Integer>();
 						
@@ -67,8 +69,12 @@ public class PrimeFactor {
 
 						}
 						
-						listDecomposition.add(new Prime(3, decomposition));
-						
+						listDecomposition.add(new Prime(4, decomposition));
+
+					} catch (NumberFormatException e) {
+						listDecomposition.add(new PrimeError(value));
+					}
+												
 						
 						
 //					} catch (NumberFormatException e) {
