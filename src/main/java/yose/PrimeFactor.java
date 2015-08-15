@@ -32,7 +32,7 @@ public class PrimeFactor {
 			
 			for (Map.Entry<String, List<String>> entry : paramList.entrySet()) {
 				String key = entry.getKey();
-				if (key.equals("number")) {
+//				if (key.equals("number")) {
 					
 					List<String> values = entry.getValue();
 					listDecomposition = new ArrayList<Prime>();
@@ -80,7 +80,7 @@ public class PrimeFactor {
 
 						
 					}
-				}
+//				}
 				
 				
 			}
