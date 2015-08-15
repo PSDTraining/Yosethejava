@@ -24,7 +24,7 @@ public class Yose {
             get("/").to((request, response) -> response.body(frontPage()).addHeader("content-type", "text/html"));
             get("/ping").to(new Ping(gson)::pong);
             get("/primeFactors").to(new PrimeFactor(gson)::prime);
-            get("/primeFactors/ui").to((request, response) -> response.body(primeFactorUI()).addHeader("content-type", "text/html"));
+            get("/primeFactors/ui").to((request, response) -> response.body(primeFactorUI()).addHeader("content-type", "text/html")::prime);
             
             get("/minesweeper").to((request, response) -> response.body(mineSweeper()));
             get("/aboutme").to((request, response) -> response.body(aboutMe()));
