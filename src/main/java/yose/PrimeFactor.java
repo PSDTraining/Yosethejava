@@ -25,6 +25,7 @@ public class PrimeFactor {
 		
 //		if (request.parameter("number") != null) {
 		if(request.allParameters()!=null){
+			Map<String, List<String>> paramList = request.allParameters();
 			
 			String numString = request.parameter("number");
 			try {
@@ -60,7 +61,7 @@ public class PrimeFactor {
 				}
 
 			
-				response.contentType(JSON).body(gson.toJson(new ArrayList<>(Arrays.asList(new Prime(2, decomposition, request.allParameters())))));
+				response.contentType(JSON).body(gson.toJson(new ArrayList<>(Arrays.asList(new Prime(3, decomposition, request.allParameters())))));
 				
 //				response.contentType(JSON).body(gson.toJson(new Prime(returnNumber, decomposition, request.allParameters())));
 				
