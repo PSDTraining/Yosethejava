@@ -23,7 +23,6 @@ public class PrimeFactor {
 
 	public void prime(Request request, Response response) {
 		
-//		if (request.parameter("number") != null) {
 		if(request.allParameters()!=null){
 			Map<String, List<String>> paramList = request.allParameters();
 			
@@ -44,9 +43,9 @@ public class PrimeFactor {
 						int returnNumber = number;
 						decomposition = new ArrayList<Integer>();
 						
-						if(number> 1000000){
-							throw new IllegalArgumentException();
-						}
+//						if(number> 1000000){
+//							throw new IllegalArgumentException();
+//						}
 
 						while (number != 1) {
 
@@ -76,14 +75,7 @@ public class PrimeFactor {
 					}catch (IllegalArgumentException ex){
 						listDecomposition.add(new PrimeError(value, "too big number (>1e6)"));
 					}
-												
 						
-						
-//					} catch (NumberFormatException e) {
-//						response.contentType(JSON).body(gson.toJson(new PrimeError(numString)));
-//					} catch (IllegalArgumentException ex){
-//						response.contentType(JSON).body(gson.toJson(new PrimeError(numString, "too big number (>1e6)")));
-//					}
 				}
 				
 				response.contentType(JSON).body(gson.toJson(listDecomposition));
@@ -98,25 +90,11 @@ public class PrimeFactor {
 	public static class Prime {
 		private int number;
 		private List<Integer> decomposition;
-//		private Map<String, List<String>> param;
-		private List<String> lstParam;
 		
 		
 		public Prime(int number, List<Integer> decomposition) {
 			this.number = number;
 			this.decomposition = decomposition;
-		}
-
-//		public Prime(int number, List<Integer> decomposition, Map<String, List<String>> param) {
-//			this.number = number;
-//			this.decomposition = decomposition;
-//			this.param = param;
-//		}
-		
-		public Prime(int number, List<Integer> decomposition, List<String> lstParam) {
-			this.number = number;
-			this.decomposition = decomposition;
-			this.lstParam = lstParam;
 		}
 		
 	}
