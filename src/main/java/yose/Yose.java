@@ -46,7 +46,7 @@ public class Yose {
 		builder.append("<form enctype='multipart/form-data' action='/primeFactors/' method='get'>");
 		builder.append("<p id=\"invitation\">Insert a number</p>");
 		builder.append("<input  type=\"text\" id=\"number\" name=\"number\">");
-		builder.append(" <input type=\"submit\" id=\"go\" value=\"Go\">");
+		builder.append(" <input type=\"button\" id=\"go\" value=\"Go\">");
 		builder.append("</form>");
 		 builder.append("</html>");
 		
