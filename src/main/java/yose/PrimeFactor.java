@@ -69,10 +69,12 @@ public class PrimeFactor {
 
 						}
 						
-						listDecomposition.add(new Prime(4, decomposition));
+						listDecomposition.add(new Prime(5, decomposition));
 
 					} catch (NumberFormatException e) {
 						listDecomposition.add(new PrimeError(value));
+					}catch (IllegalArgumentException ex){
+						listDecomposition.add(new PrimeError(value, "too big number (>1e6)"));
 					}
 												
 						
