@@ -27,6 +27,16 @@ public class PrimeFactor {
 		if(request.allParameters()!=null){
 			Map<String, List<String>> paramList = request.allParameters();
 			
+			List<String> listDecomposition = new ArrayList<>();
+			for (Map.Entry<String, List<String>> entry : paramList.entrySet()) {
+				String key = entry.getKey();
+				
+				List<String> values = entry.getValue();
+				listDecomposition = values;
+			
+			}
+			
+			
 			String numString = request.parameter("number");
 			try {
 
@@ -61,7 +71,7 @@ public class PrimeFactor {
 				}
 
 			
-				response.contentType(JSON).body(gson.toJson(new ArrayList<>(Arrays.asList(new Prime(3, decomposition, request.allParameters())))));
+				response.contentType(JSON).body(gson.toJson(new ArrayList<>(Arrays.asList(new Prime(3, decomposition, listDecomposition)))));
 				
 //				response.contentType(JSON).body(gson.toJson(new Prime(returnNumber, decomposition, request.allParameters())));
 				
@@ -77,13 +87,21 @@ public class PrimeFactor {
 	public static class Prime {
 		private int number;
 		private List<Integer> decomposition;
-		private Map<String, List<String>> param;
+//		private Map<String, List<String>> param;
+		private List<String> lstParam;
+		
 		
 
-		public Prime(int number, List<Integer> decomposition, Map<String, List<String>> param) {
+//		public Prime(int number, List<Integer> decomposition, Map<String, List<String>> param) {
+//			this.number = number;
+//			this.decomposition = decomposition;
+//			this.param = param;
+//		}
+		
+		public Prime(int number, List<Integer> decomposition, List<String> lstParam) {
 			this.number = number;
 			this.decomposition = decomposition;
-			this.param = param;
+			this.lstParam = lstParam;
 		}
 		
 	}
