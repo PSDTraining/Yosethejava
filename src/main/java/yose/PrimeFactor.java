@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 import com.vtence.molecule.Request;
 import com.vtence.molecule.Response;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -60,7 +61,11 @@ public class PrimeFactor {
 
 				}
 
-				response.contentType(JSON).body(gson.toJson(new Prime(2, decomposition, request.allParameters())));
+			
+				response.contentType(JSON).body(gson.toJson(new ArrayList<>(Arrays.asList(new Prime(returnNumber, decomposition, request.allParameters())))));
+				
+//				response.contentType(JSON).body(gson.toJson(new Prime(returnNumber, decomposition, request.allParameters())));
+				
 			} catch (NumberFormatException e) {
 				response.contentType(JSON).body(gson.toJson(new PrimeError(numString)));
 			} catch (IllegalArgumentException ex){
