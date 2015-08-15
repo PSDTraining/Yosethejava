@@ -60,7 +60,7 @@ public class PrimeFactor {
 
 				}
 
-				response.contentType(JSON).body(gson.toJson(new Prime(returnNumber, decomposition, request.allParameters())));
+				response.contentType(JSON).body(gson.toJson(new Prime(2, decomposition, request.allParameters())));
 			} catch (NumberFormatException e) {
 				response.contentType(JSON).body(gson.toJson(new PrimeError(numString)));
 			} catch (IllegalArgumentException ex){
