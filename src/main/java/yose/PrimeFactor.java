@@ -27,7 +27,7 @@ public class PrimeFactor {
 		if(request.allParameters()!=null){
 			Map<String, List<String>> paramList = request.allParameters();
 			
-			List<Prime> listDecomposition = new ArrayList<>();
+			List<Object> listDecomposition = new ArrayList<>();
 			for (Map.Entry<String, List<String>> entry : paramList.entrySet()) {
 				String key = entry.getKey();
 				
