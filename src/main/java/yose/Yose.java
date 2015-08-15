@@ -41,9 +41,12 @@ public class Yose {
 		builder.append("<h1 id=\"title\">Prime Factor</h1>");
 		builder.append("<br>");
 		builder.append("<p id=\"invitation\">Insert a number<p>");
-		builder.append("<form action=\"http://yosejava.herokuapp.com/primeFactors/\" method=\"post\">");
+		
+		 
+		builder.append("<form enctype='multipart/form-data' action='/primeFactors' method='post'>");
+//		builder.append("<form action=\"http://yosejava.herokuapp.com/primeFactors/\" method=\"post\">");
 		builder.append("<input id=\"number\" name=\"number\"/>");
-		builder.append("<input type=\"submit\" id=\"go\" value=\"go\"/>");
+		builder.append("<input type=\"submit\" id=\"go\" value=\"Go\"/>");
 		builder.append("</form>");
 		 builder.append("</html>");
 		
