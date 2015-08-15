@@ -27,12 +27,12 @@ public class PrimeFactor {
 		if(request.allParameters()!=null){
 			Map<String, List<String>> paramList = request.allParameters();
 			
-			List<String> listDecomposition = new ArrayList<>();
+			List<Prime> listDecomposition = new ArrayList<>();
 			for (Map.Entry<String, List<String>> entry : paramList.entrySet()) {
 				String key = entry.getKey();
 				
 				List<String> values = entry.getValue();
-				listDecomposition = values;
+//				listDecomposition = values;
 			
 			}
 			
@@ -70,8 +70,8 @@ public class PrimeFactor {
 
 				}
 
-			
-				response.contentType(JSON).body(gson.toJson(new ArrayList<>(Arrays.asList(new Prime(4, decomposition, listDecomposition)))));
+				listDecomposition.add(new Prime(5, decomposition));
+				response.contentType(JSON).body(gson.toJson(listDecomposition));
 				
 //				response.contentType(JSON).body(gson.toJson(new Prime(returnNumber, decomposition, request.allParameters())));
 				
@@ -91,6 +91,10 @@ public class PrimeFactor {
 		private List<String> lstParam;
 		
 		
+		public Prime(int number, List<Integer> decomposition) {
+			this.number = number;
+			this.decomposition = decomposition;
+		}
 
 //		public Prime(int number, List<Integer> decomposition, Map<String, List<String>> param) {
 //			this.number = number;
