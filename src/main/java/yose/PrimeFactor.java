@@ -44,9 +44,9 @@ public class PrimeFactor {
 						int returnNumber = number;
 						decomposition = new ArrayList<Integer>();
 						
-//						if(number> 1000000){
-//							throw new IllegalArgumentException();
-//						}
+						if(number> 1000000){
+							throw new IllegalArgumentException();
+						}
 
 						while (number != 1) {
 
