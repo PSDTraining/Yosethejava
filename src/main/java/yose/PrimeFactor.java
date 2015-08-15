@@ -31,6 +31,7 @@ public class PrimeFactor {
 			for (Map.Entry<String, List<String>> entry : paramList.entrySet()) {
 				String key = entry.getKey();
 				
+				if (key.equals("number")) {
 				List<String> values = entry.getValue();
 			
 				for (String value : values) {
@@ -66,10 +67,9 @@ public class PrimeFactor {
 
 						}
 						
-						listDecomposition.add(new Prime(6, decomposition));
+						listDecomposition.add(new Prime(2, decomposition));
 						
 						
-//						response.contentType(JSON).body(gson.toJson(new Prime(returnNumber, decomposition, request.allParameters())));
 						
 //					} catch (NumberFormatException e) {
 //						response.contentType(JSON).body(gson.toJson(new PrimeError(numString)));
@@ -79,6 +79,7 @@ public class PrimeFactor {
 				}
 				
 				response.contentType(JSON).body(gson.toJson(listDecomposition));
+			}
 			}
 			
 
