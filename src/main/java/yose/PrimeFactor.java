@@ -17,7 +17,7 @@ public class PrimeFactor {
 	private int number;
 	private List<Integer> decomposition;
 	
-	private List<List<Integer>> listDecomposition;
+	private List<Prime> listDecomposition;
 
 	public PrimeFactor(Gson gson) {
 		this.gson = gson;
@@ -35,7 +35,7 @@ public class PrimeFactor {
 				if (key.equals("number")) {
 					
 					List<String> values = entry.getValue();
-					listDecomposition = new ArrayList<List<Integer>>();
+					listDecomposition = new ArrayList<Prime>();
 					
 					for (String value : values) {
 						
@@ -71,21 +71,21 @@ public class PrimeFactor {
 							}
 
 							
-							
+							listDecomposition.add(new Prime(returnNumber, decomposition));
 						} catch (NumberFormatException e) {
 							response.contentType(JSON).body(gson.toJson(new PrimeError(numString)));
 						} catch (IllegalArgumentException ex){
 							response.contentType(JSON).body(gson.toJson(new PrimeError(numString, "too big number (>1e6)")));
 						}
 
-						listDecomposition.add(decomposition);
+						
 					}
 				}
 				
 				
 			}
 			
-			response.contentType(JSON).body(gson.toJson(new Prime(returnNumber, listDecomposition)));
+			response.contentType(JSON).body(gson.toJson(listDecomposition));
 			
 
 		}
@@ -94,12 +94,13 @@ public class PrimeFactor {
 
 	public static class Prime {
 		private int number;
-		private List<List<Integer>> decomposition;
+		private List<Integer> decomposition;
 
-		public Prime(int number, List<List<Integer>> decomposition) {
+		public Prime(int number, List<Integer> decomposition) {
 			this.number = number;
 			this.decomposition = decomposition;
 		}
+		
 		
 		
 	}
