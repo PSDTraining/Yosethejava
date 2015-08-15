@@ -42,7 +42,7 @@ public class Yose {
 		builder.append("<br>");
 		builder.append("<p id=\"invitation\">Insert a number<p>");
 		builder.append("<form action=\"http://yosejava.herokuapp.com/primeFactors/\" method=\"post\">");
-		builder.append("<input id=\"number\"/>");
+		builder.append("<input id=\"name\" name=\"number\"/>");
 		builder.append("<input type=\"submit\" id=\"go\" value=\"go\"/>");
 		builder.append("</form>");
 		 builder.append("</html>");
