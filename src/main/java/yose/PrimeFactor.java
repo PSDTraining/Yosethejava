@@ -78,7 +78,11 @@ public class PrimeFactor {
 						
 				}
 				
-				response.contentType(JSON).body(gson.toJson(listDecomposition));
+				if(listDecomposition.size()==1){
+					response.contentType(JSON).body(gson.toJson(listDecomposition.get(0)));
+				}else{
+					response.contentType(JSON).body(gson.toJson(listDecomposition));
+				}
 			}
 			}
 			
