@@ -47,7 +47,7 @@ public class Yose {
 		builder.append("<p id=\"invitation\">Insert a number</p>");
 		builder.append("<input  type=\"text\" id=\"number\" name=\"number\">");
 //		builder.append(" <input type=\"submit\" id=\"go\" value=\"Go\">");
-		builder.append(" <button type=\"submit\" id=\"go\">Go</button> ");
+		builder.append(" <button type=\"submit\" id=\"go\" name=\"go\">Go</button> ");
 		
 		builder.append("</form>");
 		 builder.append("</html>");
