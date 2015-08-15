@@ -67,7 +67,7 @@ public class PrimeFactor {
 
 						}
 						
-						listDecomposition.add(new Prime(2, decomposition));
+						listDecomposition.add(new Prime(3, decomposition));
 						
 						
 						
