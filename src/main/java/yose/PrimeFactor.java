@@ -71,7 +71,7 @@ public class PrimeFactor {
 				}
 
 			
-				response.contentType(JSON).body(gson.toJson(new ArrayList<>(Arrays.asList(new Prime(3, decomposition, listDecomposition)))));
+				response.contentType(JSON).body(gson.toJson(new ArrayList<>(Arrays.asList(new Prime(4, decomposition, listDecomposition)))));
 				
 //				response.contentType(JSON).body(gson.toJson(new Prime(returnNumber, decomposition, request.allParameters())));
 				
