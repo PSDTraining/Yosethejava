@@ -94,12 +94,13 @@ public class PrimeFactor {
 
 	public static class Prime {
 		private int number;
-		private List<Integer> decomposition;
+		private List<List<Integer>> decomposition;
 
-		public Prime(int number, List<Integer> decomposition) {
+		public Prime(int number, List<List<Integer>> decomposition) {
 			this.number = number;
 			this.decomposition = decomposition;
 		}
+		
 		
 	}
 
