@@ -24,12 +24,31 @@ public class Yose {
             get("/").to((request, response) -> response.body(frontPage()).addHeader("content-type", "text/html"));
             get("/ping").to(new Ping(gson)::pong);
             get("/primeFactors").to(new PrimeFactor(gson)::prime);
+            get("/primeFactors/ui").to((request, response) -> response.body(primeFactorUI()).addHeader("content-type", "text/html"));
+            
             get("/minesweeper").to((request, response) -> response.body(mineSweeper()));
             get("/aboutme").to((request, response) -> response.body(aboutMe()));
             get("/astroport").to((request, response) -> response.body(theAstroport()).addHeader("content-type", "text/html"));
         }});
     }
 
+    public String primeFactorUI(){
+    	StringBuilder builder = new StringBuilder();
+    	builder.append("<html>");
+    	builder.append("<head>");
+		builder.append("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
+		builder.append("</head>");
+		builder.append("<h1 id=\"title\">Prime Factor</h1>");
+		builder.append("<br>");
+		builder.append("<p id=\"invitation\">Insert a number<p>");
+		builder.append("<form action=\"//primeFactors//\" method=\"post\">");
+		builder.append("<input id=\"number\"/>");
+		builder.append("<input type=\"submit\" id=\"go\" value=\"go\"/>");
+		builder.append("</form>");
+		 builder.append("</html>");
+		
+		return builder.toString();
+    }
     public String theAstroport(){
         StringBuilder builder = new StringBuilder();
         builder.append("<html>");
