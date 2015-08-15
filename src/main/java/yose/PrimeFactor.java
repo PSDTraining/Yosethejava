@@ -30,6 +30,10 @@ public class PrimeFactor {
 				number = Integer.parseInt(numString);
 				int returnNumber = number;
 				decomposition = new ArrayList<Integer>();
+				
+				if(number> 1000000){
+					throw new IllegalArgumentException();
+				}
 
 				while (number != 1) {
 
@@ -55,6 +59,8 @@ public class PrimeFactor {
 				response.contentType(JSON).body(gson.toJson(new Prime(returnNumber, decomposition)));
 			} catch (NumberFormatException e) {
 				response.contentType(JSON).body(gson.toJson(new PrimeError(numString)));
+			} catch (IllegalArgumentException ex){
+				response.contentType(JSON).body(gson.toJson(new PrimeError(numString, "too big number (>1e6)")));
 			}
 		}
 
@@ -68,7 +74,7 @@ public class PrimeFactor {
 			this.number = number;
 			this.decomposition = decomposition;
 		}
-		// public final boolean alive = true;
+		
 	}
 
 	public static class PrimeError {
@@ -78,6 +84,11 @@ public class PrimeFactor {
 		public PrimeError(String notANumber) {
 			this.number = notANumber;
 			this.error = "not a number";
+		}
+		
+		public PrimeError(String notANumber, String error) {
+			this.number = notANumber;
+			this.error = error;
 		}
 	}
 }
