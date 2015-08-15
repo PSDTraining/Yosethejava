@@ -5,9 +5,7 @@ import static com.vtence.molecule.http.MimeTypes.JSON;
 import com.google.gson.Gson;
 import com.vtence.molecule.Request;
 import com.vtence.molecule.Response;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class PrimeFactor {
 
