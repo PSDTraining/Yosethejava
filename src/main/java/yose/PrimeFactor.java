@@ -83,13 +83,11 @@ public class PrimeFactor {
 				}
 				
 				if(listDecomposition.size()==1){
-					response.contentType(JSON).body(gson.toJson(listDecomposition.get(0))+
-							"<p id =\"result\">"+number+"</p>");
+					response.contentType(JSON).body(gson.toJson(listDecomposition.get(0)));
 					
 					
 				}else{
-					response.contentType(JSON).body(gson.toJson(listDecomposition)+
-							" is possible");
+					response.contentType(JSON).body(gson.toJson(listDecomposition));
 				}
 			}
 			}
