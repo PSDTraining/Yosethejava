@@ -34,7 +34,7 @@ public class PrimeFactor {
 				
 				if (key.equals("go")) {
 					isFormRequest = true;
-					break;
+//					break;
 				}
 			}
 			
