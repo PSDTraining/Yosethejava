@@ -28,7 +28,7 @@ public class Yose {
             
             get("/minesweeper").to((request, response) -> response.body(mineSweeper()));
             get("/aboutme").to((request, response) -> response.body(aboutMe()));
-            get("/readme").to((request, response) -> response.body(readMe()()));
+            get("/readme").to((request, response) -> response.body(readMe()));
             get("/astroport").to((request, response) -> response.body(theAstroport()).addHeader("content-type", "text/html"));
         }});
     }
