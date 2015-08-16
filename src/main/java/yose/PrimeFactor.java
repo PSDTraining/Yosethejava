@@ -91,7 +91,7 @@ public class PrimeFactor {
 				
 				if(listDecomposition.size()==1){
 					response.contentType(JSON).body(gson.toJson(listDecomposition.get(0))+
-							" is possible");
+							isFormRequest ? " is possible" : "");
 					
 					
 				}else{
