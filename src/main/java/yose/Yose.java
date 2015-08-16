@@ -28,10 +28,21 @@ public class Yose {
             
             get("/minesweeper").to((request, response) -> response.body(mineSweeper()));
             get("/aboutme").to((request, response) -> response.body(aboutMe()));
+            get("/readme").to((request, response) -> response.body(readMe()()));
             get("/astroport").to((request, response) -> response.body(theAstroport()).addHeader("content-type", "text/html"));
         }});
     }
 
+    public String readMe(){
+    	StringBuilder builder = new StringBuilder();
+    	builder.append("<html>");
+    	builder.append("<head>");
+		builder.append("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
+		builder.append("</head>");
+		builder.append("<p id=\"readme\">YoseTheGame</p>");
+		builder.append("</html>");
+    }
+    
     public String primeFactorUI(){
     	StringBuilder builder = new StringBuilder();
     	builder.append("<html>");
@@ -40,13 +51,9 @@ public class Yose {
 		builder.append("</head>");
 		builder.append("<h1 id=\"title\">Prime Factor</h1>");
 		builder.append("<br>");
-		
-		
-		 
 		builder.append("<form enctype='multipart/form-data' action='/primeFactors/' method='get'>");
 		builder.append("<p id=\"invitation\">Insert a number</p>");
 		builder.append("<input  type=\"text\" id=\"number\" name=\"number\">");
-//		builder.append(" <input type=\"submit\" id=\"go\" value=\"Go\">");
 		builder.append(" <button type=\"submit\" id=\"go\" name=\"go\">Go</button> ");
 		
 		builder.append("</form>");
@@ -80,8 +87,10 @@ public class Yose {
 		builder.append("</head>");
 		builder.append("<p></p>");
     	builder.append("Hello Yose <br/>");
-    		builder.append("<a id=\"contact-me-link\" href=\"/aboutme\"/>Contact Information</a><br>");
-    		builder.append("<a id=\"ping-challenge-link\" href=\"/ping\"/>Ping</a>");
+    	builder.append("<a id=\"contact-me-link\" href=\"/aboutme\"/>Contact Information</a><br>");
+    	builder.append("<a id=\"ping-challenge-link\" href=\"/ping\"/>Ping</a>");
+    	builder.append("<a href=\"http://yosejava.herokuapp.com/readme\"> Repository link </a>");
+    		
     	builder.append("</html>");
     	return builder.toString();
     }
