@@ -28,14 +28,7 @@ public class PrimeFactor {
 			
 			List<Object> listDecomposition = new ArrayList<>();
 			
-			boolean isFormRequest = false;
-			for (Map.Entry<String, List<String>> entry : paramList.entrySet()) {
-				String key = entry.getKey();
-				
-				if (key.equals("go")) {
-					isFormRequest = true;
-				}
-			}
+			
 			
 			for (Map.Entry<String, List<String>> entry : paramList.entrySet()) {
 				String key = entry.getKey();
@@ -51,25 +44,25 @@ public class PrimeFactor {
 						number = Integer.parseInt(value);
 						
 						
-						int returnNumber = number;
+						int tempNumber = number;
 						decomposition = new ArrayList<Integer>();
 						
 						if(number> 1000000){
 							throw new IllegalArgumentException();
 						}
 
-						while (number != 1) {
+						while (tempNumber != 1) {
 
-							if (number % 2 == 0) {
+							if (tempNumber % 2 == 0) {
 								decomposition.add(2);
-								number = number / 2;
+								tempNumber = tempNumber / 2;
 							} else {
 								int evenNumber = 3;
-								while (evenNumber <= returnNumber) {
+								while (evenNumber <= number) {
 
-									if (number % evenNumber == 0) {
+									if (tempNumber % evenNumber == 0) {
 										decomposition.add(evenNumber);
-										number = number / evenNumber;
+										tempNumber = tempNumber / evenNumber;
 										break;
 									}
 									evenNumber += 2;
@@ -79,7 +72,7 @@ public class PrimeFactor {
 
 						}
 						
-						listDecomposition.add(new Prime(returnNumber, decomposition));
+						listDecomposition.add(new Prime(number, decomposition));
 
 					} catch (NumberFormatException e) {
 						listDecomposition.add(new PrimeError(value));
@@ -91,7 +84,7 @@ public class PrimeFactor {
 				
 				if(listDecomposition.size()==1){
 					response.contentType(JSON).body(gson.toJson(listDecomposition.get(0))+
-							isFormRequest ? " is possible" : "");
+							"<p id =\"result\">"+number+"</p>");
 					
 					
 				}else{
