@@ -34,7 +34,6 @@ public class PrimeFactor {
 				
 				if (key.equals("go")) {
 					isFormRequest = true;
-//					break;
 				}
 			}
 			
@@ -91,11 +90,13 @@ public class PrimeFactor {
 				}
 				
 				if(listDecomposition.size()==1){
-					response.contentType(JSON).body(gson.toJson(listDecomposition.get(0))+" is possible");
+					response.contentType(JSON).body(gson.toJson(listDecomposition.get(0))+ 
+							(isFormRequest ? "YEAH is possible" : ""));
 					
 					
 				}else{
-					response.contentType(JSON).body(gson.toJson(listDecomposition)+" is possible");
+					response.contentType(JSON).body(gson.toJson(listDecomposition)+
+							(isFormRequest ? "YEAH is possible" : ""));
 				}
 			}
 			}
