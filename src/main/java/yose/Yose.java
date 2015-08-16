@@ -89,7 +89,7 @@ public class Yose {
     	builder.append("Hello Yose <br/>");
     	builder.append("<a id=\"contact-me-link\" href=\"/aboutme\"/>Contact Information</a><br>");
     	builder.append("<a id=\"ping-challenge-link\" href=\"/ping\"/>Ping</a>");
-    	builder.append("<a href=\"http://yosejava.herokuapp.com/readme\"> Repository link </a>");
+    	builder.append("<a id=\"repository-link\" href=\"http://yosejava.herokuapp.com/readme\"> Repository link </a>");
     		
     	builder.append("</html>");
     	return builder.toString();
