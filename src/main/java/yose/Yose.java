@@ -41,6 +41,8 @@ public class Yose {
 		builder.append("</head>");
 		builder.append("<p id=\"readme\">YoseTheGame</p>");
 		builder.append("</html>");
+		
+		return builder.toString();
     }
     
     public String primeFactorUI(){
