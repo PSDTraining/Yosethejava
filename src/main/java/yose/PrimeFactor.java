@@ -90,13 +90,13 @@ public class PrimeFactor {
 				}
 				
 				if(listDecomposition.size()==1){
-					response.contentType(JSON).body(gson.toJson(listDecomposition.get(0))+ 
-							(isFormRequest ? "YEAH is possible" : ""));
+					response.contentType(JSON).body(gson.toJson(listDecomposition.get(0))+
+							" is possible");
 					
 					
 				}else{
 					response.contentType(JSON).body(gson.toJson(listDecomposition)+
-							(isFormRequest ? "YEAH is possible" : ""));
+							" is possible");
 				}
 			}
 			}
