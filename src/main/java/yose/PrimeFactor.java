@@ -27,6 +27,17 @@ public class PrimeFactor {
 			Map<String, List<String>> paramList = request.allParameters();
 			
 			List<Object> listDecomposition = new ArrayList<>();
+			
+			boolean isFormRequest = false;
+			for (Map.Entry<String, List<String>> entry : paramList.entrySet()) {
+				String key = entry.getKey();
+				
+				if (key.equals("go")) {
+					isFormRequest = true;
+					break;
+				}
+			}
+			
 			for (Map.Entry<String, List<String>> entry : paramList.entrySet()) {
 				String key = entry.getKey();
 				
@@ -80,9 +91,11 @@ public class PrimeFactor {
 				}
 				
 				if(listDecomposition.size()==1){
-					response.contentType(JSON).body(gson.toJson(listDecomposition.get(0)));
+					response.contentType(JSON).body(gson.toJson(listDecomposition.get(0))+" is possible");
+					
+					
 				}else{
-					response.contentType(JSON).body(gson.toJson(listDecomposition));
+					response.contentType(JSON).body(gson.toJson(listDecomposition)+" is possible");
 				}
 			}
 			}
