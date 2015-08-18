@@ -73,13 +73,13 @@ public class Yose {
 //    	====================
     	
     	builder.append("$.ajax({");
-    	builder.append(" url: '//yosejava.herokuapp.com/primeFactors',");
+    	builder.append(" url: '/primeFactors',");
     	builder.append(" type: 'GET',");
     	builder.append(" data: {number : '20'},");
-    	builder.append("contentType: \"application/json\",");
+//    	builder.append("contentType: \"application/json\",");
     	builder.append("dataType: 'json',");
     	builder.append("success: function (data) {");
-    	builder.append("var obj = jQuery.parseJSON(data);");
+//    	builder.append("var obj = jQuery.parseJSON(data);");
 //    	builder.append("alert(obj.number);");
     	builder.append("$('#result').html(\"7052 = 2 x 2 x 41 x 43\");");
     	builder.append("}");
@@ -93,7 +93,7 @@ public class Yose {
     	
     	
 //    	builder.append("$(\"#city\").html(\"This is Hello World by JQuery\");");
-    	builder.append("return false; ");
+//    	builder.append("return false; ");
     	builder.append(" });");
 //    	builder.append();
 //    	builder.append();
@@ -101,7 +101,7 @@ public class Yose {
     	builder.append("</script>");
 		
 		builder.append("</head>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 26 </h1>");
+		builder.append("<h1 id=\"title\">Prime Factor - version 27 </h1>");
 		builder.append("<br>");
 //		builder.append("<form enctype='multipart/form-data' action='/primeFactors/' method='get'>");
 		builder.append("<form enctype='multipart/form-data' >");
