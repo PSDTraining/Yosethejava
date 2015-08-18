@@ -73,11 +73,12 @@ public class Yose {
 //    	====================
     	
     	builder.append("$.ajax({");
-    	builder.append(" url: '//yosejava.herokuapp.com/primeFactors/',");
+//    	builder.append(" url: '//yosejava.herokuapp.com/primeFactors/',");
+    	builder.append(" url: '//http://freegeoip.net/json/',");
     	builder.append(" type: 'GET',");
-    	builder.append(" data: {number : '20'},");
-    	builder.append("contentType: \"application/json\",");
-    	builder.append("dataType: 'json',");
+//    	builder.append(" data: {number : '20'},");
+//    	builder.append("contentType: \"application/json\",");
+    	builder.append("dataType: 'jsonp',");
     	builder.append("success: function (data) {");
 //    	builder.append("var obj = JSON.parse(data);");
     	builder.append("alert(data.responseTex);");
@@ -101,7 +102,7 @@ public class Yose {
     	builder.append("</script>");
 		
 		builder.append("</head>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 21 </h1>");
+		builder.append("<h1 id=\"title\">Prime Factor - version 22 </h1>");
 		builder.append("<br>");
 //		builder.append("<form enctype='multipart/form-data' action='/primeFactors/' method='get'>");
 		builder.append("<form enctype='multipart/form-data' >");
