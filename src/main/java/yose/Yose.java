@@ -76,10 +76,11 @@ public class Yose {
     	builder.append(" url: '//yosejava.herokuapp.com/primeFactors/',");
     	builder.append(" type: 'GET',");
     	builder.append(" data: {number : '20'},");
-    	builder.append("contentType: \"application/json; charset=utf-8\",");
+    	builder.append("contentType: \"application/json\",");
     	builder.append("dataType: 'json',");
     	builder.append("success: function (data) {");
-    	builder.append("$('#city').html(data);");
+    	builder.append("var obj = JSON.parse(data);");
+    	builder.append("$('#city').html(obj.length);");
     	builder.append("}");
     	builder.append(",");
     	builder.append("error: function(result) {");
