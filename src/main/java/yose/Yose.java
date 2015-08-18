@@ -68,9 +68,10 @@ public class Yose {
     	builder.append("</script>");
 		
 		builder.append("</head>");
-		builder.append("<h1 id=\"title\">Prime Factor</h1>");
+		builder.append("<h1 id=\"title\">Prime Factor - version 1 </h1>");
 		builder.append("<br>");
-		builder.append("<form enctype='multipart/form-data' action='/primeFactors/' method='get'>");
+//		builder.append("<form enctype='multipart/form-data' action='/primeFactors/' method='get'>");
+		builder.append("<form enctype='multipart/form-data' >");
 		builder.append("<p id=\"invitation\">Insert a number</p>");
 		builder.append("<input  type=\"text\" id=\"number\" name=\"number\">");
 		builder.append(" <button type=\"submit\" id=\"go\" name=\"go\">Go</button> ");
