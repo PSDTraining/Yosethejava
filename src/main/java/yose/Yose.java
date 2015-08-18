@@ -78,7 +78,7 @@ public class Yose {
     	builder.append(" data: {number : '20'},");
     	builder.append("dataType: 'json',");
     	builder.append("success: function (data) {");
-    	builder.append("$('#city').html(\"ola\");");
+    	builder.append("$('#city').html(data);");
     	builder.append("}");
     	builder.append(",");
     	builder.append("error: function(result) {");
