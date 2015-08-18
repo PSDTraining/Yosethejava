@@ -80,7 +80,8 @@ public class Yose {
     	builder.append("dataType: 'json',");
     	builder.append("success: function (data) {");
 //    	builder.append("var obj = JSON.parse(data);");
-    	builder.append("$('#city').html(data.responseTex);");
+    	builder.append("alert(data.responseTex);");
+//    	builder.append("$('#city').html(data.responseTex);");
     	builder.append("}");
     	builder.append(",");
     	builder.append("error: function(result) {");
@@ -100,7 +101,7 @@ public class Yose {
     	builder.append("</script>");
 		
 		builder.append("</head>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 20 </h1>");
+		builder.append("<h1 id=\"title\">Prime Factor - version 21 </h1>");
 		builder.append("<br>");
 //		builder.append("<form enctype='multipart/form-data' action='/primeFactors/' method='get'>");
 		builder.append("<form enctype='multipart/form-data' >");
