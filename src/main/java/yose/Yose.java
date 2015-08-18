@@ -57,7 +57,7 @@ public class Yose {
     	builder.append(" $.ajax({");
     	builder.append("url: '/primeFactors/', ");
     	builder.append("type: 'GET', ");
-    	builder.append("dataType: 'jsonp',");
+    	builder.append("dataType: 'json',");
     	builder.append(" success: function(dataN) {");
     	builder.append("$('#city').html(dataN.number);");
     	builder.append(" }");
