@@ -37,7 +37,7 @@ public class Yose {
     	StringBuilder builder = new StringBuilder();
     	builder.append("<html>");
     	builder.append("<head>");
-//		builder.append("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
+		builder.append("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
 		builder.append("</head>");
 		builder.append("<p id=\"readme\">YoseTheGame</p>");
 		builder.append("</html>");
@@ -50,6 +50,23 @@ public class Yose {
     	builder.append("<html>");
     	builder.append("<head>");
 		builder.append("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
+	   	builder.append("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\">");
+    	builder.append("</script>");
+    	builder.append("<script>");
+    	builder.append("$(document).ready(function(){");
+    	builder.append("$(\"button\").click(function(){");
+    	builder.append(" $.ajax({");
+    	builder.append("url: '//freegeoip.net/json/', ");
+    	builder.append("type: 'POST', ");
+    	builder.append("dataType: 'jsonp',");
+    	builder.append(" success: function(location) {");
+    	builder.append("jQuery('#city').html(location.city);");
+    	builder.append(" }");
+    	builder.append("} );");
+    	builder.append("});");
+    	builder.append("});");
+    	builder.append("</script>");
+		
 		builder.append("</head>");
 		builder.append("<h1 id=\"title\">Prime Factor</h1>");
 		builder.append("<br>");
@@ -57,7 +74,7 @@ public class Yose {
 		builder.append("<p id=\"invitation\">Insert a number</p>");
 		builder.append("<input  type=\"text\" id=\"number\" name=\"number\">");
 		builder.append(" <button type=\"submit\" id=\"go\" name=\"go\">Go</button> ");
-		
+		builder.append("<p id=\"city\"></p>");
 		builder.append("</form>");
 		 builder.append("</html>");
 		
