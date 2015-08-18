@@ -49,10 +49,9 @@ public class Yose {
     	StringBuilder builder = new StringBuilder();
     	builder.append("<html>");
     	builder.append("<head>");
-//		builder.append("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
 	   	builder.append("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\">");
     	builder.append("</script>");
-    	builder.append("<script>");
+    	builder.append("<script type=\"text/JavaScript\">");
     	builder.append("$(document).ready(function(){");
     	builder.append("$(\"button\").click(function(){");
     	builder.append(" $.ajax({");
@@ -68,7 +67,7 @@ public class Yose {
     	builder.append("</script>");
 		
 		builder.append("</head>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 3 </h1>");
+		builder.append("<h1 id=\"title\">Prime Factor - version 4 </h1>");
 		builder.append("<br>");
 //		builder.append("<form enctype='multipart/form-data' action='/primeFactors/' method='get'>");
 		builder.append("<form enctype='multipart/form-data' >");
