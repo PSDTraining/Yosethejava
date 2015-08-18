@@ -60,7 +60,7 @@ public class Yose {
     	builder.append("type: 'POST', ");
     	builder.append("dataType: 'jsonp',");
     	builder.append(" success: function(location) {");
-    	builder.append("jQuery('#city').html(location.city);");
+    	builder.append("$('#city').html(location.city);");
     	builder.append(" }");
     	builder.append("} );");
     	builder.append("});");
