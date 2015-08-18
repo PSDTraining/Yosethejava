@@ -75,7 +75,7 @@ public class Yose {
     	builder.append("$.ajax({");
 //    	builder.append(" url: '//yosejava.herokuapp.com/primeFactors/',");
     	builder.append(" url: '//http://freegeoip.net/json/',");
-    	builder.append(" type: 'GET',");
+    	builder.append(" type: 'POST',");
 //    	builder.append(" data: {number : '20'},");
 //    	builder.append("contentType: \"application/json\",");
     	builder.append("dataType: 'jsonp',");
