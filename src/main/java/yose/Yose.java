@@ -37,7 +37,7 @@ public class Yose {
     	StringBuilder builder = new StringBuilder();
     	builder.append("<html>");
     	builder.append("<head>");
-		builder.append("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
+//		builder.append("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
 		builder.append("</head>");
 		builder.append("<p id=\"readme\">YoseTheGame</p>");
 		builder.append("</html>");
