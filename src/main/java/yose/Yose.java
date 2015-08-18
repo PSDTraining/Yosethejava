@@ -56,11 +56,11 @@ public class Yose {
     	builder.append("$(document).ready(function(){");
     	builder.append("$(\"button\").click(function(){");
     	builder.append(" $.ajax({");
-    	builder.append("url: '//freegeoip.net/json/', ");
-    	builder.append("type: 'POST', ");
+    	builder.append("url: '/primeFactors/', ");
+    	builder.append("type: 'GET', ");
     	builder.append("dataType: 'jsonp',");
-    	builder.append(" success: function(location) {");
-    	builder.append("$('#city').html(location.city);");
+    	builder.append(" success: function(dataN) {");
+    	builder.append("$('#city').html(dataN.number);");
     	builder.append(" }");
     	builder.append("} );");
     	builder.append("});");
@@ -68,7 +68,7 @@ public class Yose {
     	builder.append("</script>");
 		
 		builder.append("</head>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 1 </h1>");
+		builder.append("<h1 id=\"title\">Prime Factor - version 3 </h1>");
 		builder.append("<br>");
 //		builder.append("<form enctype='multipart/form-data' action='/primeFactors/' method='get'>");
 		builder.append("<form enctype='multipart/form-data' >");
