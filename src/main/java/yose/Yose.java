@@ -73,7 +73,7 @@ public class Yose {
 //    	====================
     	
     	builder.append("$.ajax({");
-    	builder.append(" url: '/primeFactors',");
+    	builder.append(" url: '/primeFactors/',");
     	builder.append(" type: 'GET',");
     	builder.append(" data: {number : '20'},");
 //    	builder.append("contentType: \"application/json\",");
@@ -81,7 +81,7 @@ public class Yose {
     	builder.append("success: function (data) {");
 //    	builder.append("var obj = jQuery.parseJSON(data);");
 //    	builder.append("alert(obj.number);");
-    	builder.append("$('#result').html(\"7052 = 2 x 2 x 41 x 43\");");
+    	builder.append("$('#result').html(\"7052 = 2 x 2 x 41 x 43\")");
     	builder.append("}");
     	builder.append(",");
     	builder.append("error: function(result) {");
