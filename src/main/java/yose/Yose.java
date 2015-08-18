@@ -73,7 +73,7 @@ public class Yose {
 //    	====================
     	
     	builder.append("$.ajax({");
-    	builder.append(" url: '/primeFactors/',");
+    	builder.append(" url: '/http://yosejava.herokuapp.com/primeFactors/',");
     	builder.append(" type: 'GET',");
     	builder.append(" data: {number : '20'},");
     	builder.append("contentType: \"application/json; charset=utf-8\",");
