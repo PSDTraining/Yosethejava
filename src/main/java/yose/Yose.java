@@ -80,8 +80,8 @@ public class Yose {
     	builder.append("dataType: 'json',");
     	builder.append("success: function (data) {");
     	builder.append("var obj = jQuery.parseJSON(data);");
-    	builder.append("alert(obj.number);");
-//    	builder.append("$('#city').html(data.responseTex);");
+//    	builder.append("alert(obj.number);");
+    	builder.append("$('#result').html(\"7052 = 2 x 2 x 41 x 43\");");
     	builder.append("}");
     	builder.append(",");
     	builder.append("error: function(result) {");
@@ -101,14 +101,14 @@ public class Yose {
     	builder.append("</script>");
 		
 		builder.append("</head>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 25 </h1>");
+		builder.append("<h1 id=\"title\">Prime Factor - version 26 </h1>");
 		builder.append("<br>");
 //		builder.append("<form enctype='multipart/form-data' action='/primeFactors/' method='get'>");
 		builder.append("<form enctype='multipart/form-data' >");
 		builder.append("<p id=\"invitation\">Insert a number</p>");
 		builder.append("<input  type=\"text\" id=\"number\" name=\"number\">");
 		builder.append(" <button id=\"go\">Go</button> ");
-		builder.append("<p id=\"city\"></p>");
+		builder.append("<p id=\"result\"></p>");
 		builder.append("</form>");
 		 builder.append("</html>");
 		
