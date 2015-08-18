@@ -68,7 +68,7 @@ public class Yose {
     	
     	
     	builder.append("$(\"#city\").html(\"This is Hello World by JQuery\");");
-    	
+    	builder.append("return false; ");
     	builder.append(" });");
 //    	builder.append();
 //    	builder.append();
@@ -76,7 +76,7 @@ public class Yose {
     	builder.append("</script>");
 		
 		builder.append("</head>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 7 </h1>");
+		builder.append("<h1 id=\"title\">Prime Factor - version 8 </h1>");
 		builder.append("<br>");
 //		builder.append("<form enctype='multipart/form-data' action='/primeFactors/' method='get'>");
 		builder.append("<form enctype='multipart/form-data' >");
