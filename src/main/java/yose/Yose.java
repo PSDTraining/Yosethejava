@@ -49,7 +49,7 @@ public class Yose {
     	StringBuilder builder = new StringBuilder();
     	builder.append("<html>");
     	builder.append("<head>");
-		builder.append("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
+//		builder.append("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
 	   	builder.append("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\">");
     	builder.append("</script>");
     	builder.append("<script>");
