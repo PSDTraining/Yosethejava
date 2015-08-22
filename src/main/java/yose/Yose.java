@@ -60,7 +60,7 @@ public class Yose {
     	builder.append(" hr.onreadystatechange = function() { ");
     	builder.append("if(hr.readyState == 4 && hr.status == 200) { ");
     	builder.append("var data = JSON.parse(hr.responseText); ");
-    	builder.append("results.innerHTML = data.number; ");
+    	builder.append("results.innerHTML = \"olaaaaaaaaaaa\"; ");
     	builder.append(" }");
     	builder.append(" }");
     	builder.append("hr.send(null); ");
