@@ -49,9 +49,9 @@ public class Yose {
     	StringBuilder builder = new StringBuilder();
     	builder.append("<html>");
     	builder.append("<head>");
-	   	builder.append("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\">");
+//	   	builder.append("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\">");
     	builder.append("</script>");
-    	builder.append("<script type=\"text/JavaScript\">");
+    	builder.append("<script>");
     	builder.append("function ajax_get_json(){ ");
     	builder.append("var results = document.getElementById(\"results\");");
     	builder.append("var hr = new XMLHttpRequest();");
