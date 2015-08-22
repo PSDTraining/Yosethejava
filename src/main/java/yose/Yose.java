@@ -61,7 +61,7 @@ public class Yose {
 //    	builder.append("results.innerHTML = \"olaaaaaaaaaaa\"; ");
 //    	builder.append(" }");
 //    	builder.append(" }");
-    	builder.append("hr.send(null); ");
+//    	builder.append("hr.send(null); ");
     	builder.append("results.innerHTML = \"requesting...\"; ");
     	builder.append("}");
     
@@ -69,7 +69,7 @@ public class Yose {
     	builder.append("</script>");
 		
 		builder.append("</head>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 40 </h1>");
+		builder.append("<h1 id=\"title\">Prime Factor - version 41 </h1>");
 		builder.append("<br>");
 		builder.append("<form enctype='multipart/form-data' >");
 		builder.append("<p id=\"invitation\">Insert a number</p>");
