@@ -49,21 +49,19 @@ public class Yose {
     	StringBuilder builder = new StringBuilder();
     	builder.append("<html>");
     	builder.append("<head>");
-//	   	builder.append("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\">");
-//    	builder.append("</script>");
     	builder.append("<script>");
     	builder.append("function ajax_get_json(){ ");
     	builder.append("var results = document.getElementById(\"results\");");
-//    	builder.append("var hr = new XMLHttpRequest();");
-//    	builder.append(" hr.open(\"GET\", \"/primeFactors?number=20\", true);");
-//    	builder.append("hr.setRequestHeader(\"Content-type\", \"application/json\", true);");
-//    	builder.append(" hr.onreadystatechange = function() { ");
-//    	builder.append("if(hr.readyState == 4 && hr.status == 200) { ");
-//    	builder.append("var data = JSON.parse(hr.responseText); ");
-//    	builder.append("results.innerHTML = \"olaaaaaaaaaaa\"; ");
-//    	builder.append(" }");
-//    	builder.append(" }");
-//    	builder.append("hr.send(null); ");
+    	builder.append("var hr = new XMLHttpRequest();");
+    	builder.append(" hr.open(\"GET\", \"/primeFactors?number=20\", true);");
+    	builder.append("hr.setRequestHeader(\"Content-type\", \"application/json\", true);");
+    	builder.append(" hr.onreadystatechange = function() { ");
+    	builder.append("if(hr.readyState == 4 && hr.status == 200) { ");
+    	builder.append("var data = JSON.parse(hr.responseText); ");
+    	builder.append("results.innerHTML = \"olaaaaaaaaaaa\"; ");
+    	builder.append(" }");
+    	builder.append(" }");
+    	builder.append("hr.send(null); ");
     	builder.append("results.innerHTML = \"requesting...\"; ");
     	builder.append("}");
     
@@ -71,7 +69,7 @@ public class Yose {
     	builder.append("</script>");
 		
 		builder.append("</head>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 35 </h1>");
+		builder.append("<h1 id=\"title\">Prime Factor - version 36 </h1>");
 		builder.append("<br>");
 		builder.append("<form enctype='multipart/form-data' >");
 		builder.append("<p id=\"invitation\">Insert a number</p>");
