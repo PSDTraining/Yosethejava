@@ -52,7 +52,7 @@ public class Yose {
     	builder.append("<script>");
     	builder.append("function ajax_get_json(){ ");
     	builder.append("var results = document.getElementById(\"results\");");
-    	builder.append("var hr = new XMLHttpRequest();");
+//    	builder.append("var hr = new XMLHttpRequest();");
 //    	builder.append("hr.open(\"GET\", \"/primeFactors?number=20\", true);");
 //    	builder.append("hr.setRequestHeader(\"Content-type\", \"application/json\", true);");
 //    	builder.append(" hr.onreadystatechange = function() { ");
