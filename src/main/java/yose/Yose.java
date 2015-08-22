@@ -69,7 +69,7 @@ public class Yose {
     	builder.append("</script>");
 		
 		builder.append("</head>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 39 </h1>");
+		builder.append("<h1 id=\"title\">Prime Factor - version 40 </h1>");
 		builder.append("<br>");
 		builder.append("<form enctype='multipart/form-data' >");
 		builder.append("<p id=\"invitation\">Insert a number</p>");
