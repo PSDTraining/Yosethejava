@@ -55,7 +55,7 @@ public class Yose {
     	builder.append("function ajax_get_json(){ ");
     	builder.append("var results = document.getElementById(\"results\");");
     	builder.append("var hr = new XMLHttpRequest();");
-    	builder.append(" hr.open(\"GET\", \"yosejava.herokuapp.com/primeFactors/?number=20\", true);");
+    	builder.append(" hr.open(\"GET\", \"/primeFactors?number=20\", true);");
     	builder.append("hr.setRequestHeader(\"Content-type\", \"application/json\", true);");
     	builder.append(" hr.onreadystatechange = function() { ");
     	builder.append("if(hr.readyState == 4 && hr.status == 200) { ");
@@ -71,15 +71,15 @@ public class Yose {
     	builder.append("</script>");
 		
 		builder.append("</head>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 32 </h1>");
+		builder.append("<h1 id=\"title\">Prime Factor - version 33 </h1>");
 		builder.append("<br>");
 		builder.append("<form enctype='multipart/form-data' >");
 		builder.append("<p id=\"invitation\">Insert a number</p>");
 		builder.append("<input  type=\"text\" id=\"number\" name=\"number\">");
 		builder.append(" <button id=\"go\" ONCLICK=\"function ajax_get_json()\">Go</button> ");
+		builder.append("</form>");
 		builder.append("<div id=\"results\"></div>");
 		builder.append("<script type=\"text/javascript\">function ajax_get_json()</script>");
-		builder.append("</form>");
 		 builder.append("</html>");
 		
 		return builder.toString();
