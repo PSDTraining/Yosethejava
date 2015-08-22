@@ -52,63 +52,33 @@ public class Yose {
 	   	builder.append("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\">");
     	builder.append("</script>");
     	builder.append("<script type=\"text/JavaScript\">");
-    	builder.append("$(document).ready(function(){");
-//    	builder.append("$(\"button\").click(function(){");
-//    	builder.append(" $.ajax({");
-//    	builder.append("url: '/primeFactors/', ");
-//    	builder.append("type: 'GET', ");
-//    	builder.append("dataType: 'json',");
-//    	builder.append(" success: function(dataN) {");
-//    	builder.append("$('#city').html(dataN.number);");
-//    	builder.append(" }");
-//    	builder.append("} );");
-//    	builder.append("});");
-    	
-    	builder.append("$('#go').click(function() {");
-    	
-//    	================
-//    	builder.append("$.get(\"/readme\", function(data){");
-//    	builder.append("$(\"#city\").html(data);");
-//    	builder.append("});");
-//    	====================
-    	
-    	builder.append("$.ajax({");
-    	builder.append(" url: '/primeFactors/',");
-    	builder.append(" type: 'GET',");
-    	builder.append(" data: {number : '20'},");
-//    	builder.append("contentType: \"application/json\",");
-    	builder.append("dataType: 'json',");
-    	builder.append("success: function (data) {");
-//    	builder.append("var obj = jQuery.parseJSON(data);");
-//    	builder.append("alert(obj.number);");
-    	builder.append("$('#result').html(\"7052 = 2 x 2 x 41 x 43\")");
+    	builder.append("function ajax_get_json(){ ");
+    	builder.append("var results = document.getElementById(\"results\");");
+    	builder.append("var hr = new XMLHttpRequest();");
+    	builder.append(" hr.open(\"GET\", \"/primeFactors/?number=20\", true);");
+    	builder.append("hr.setRequestHeader(\"Content-type\", \"application/json\", true);");
+    	builder.append(" hr.onreadystatechange = function() { ");
+    	builder.append("if(hr.readyState == 4 && hr.status == 200) { ");
+    	builder.append("var data = JSON.parse(hr.responseText); ");
+    	builder.append("results.innerHTML = data.number; ");
+    	builder.append(" }");
+    	builder.append(" }");
+    	builder.append("hr.send(null); ");
+    	builder.append("results.innerHTML = \"requesting...\"; ");
     	builder.append("}");
-    	builder.append(",");
-    	builder.append("error: function(result) {");
-    	builder.append("alert(\"Error\");");
-    	builder.append("}");
+    
     	
-    	builder.append("});");
-    	
-    	
-    	
-//    	builder.append("$(\"#city\").html(\"This is Hello World by JQuery\");");
-//    	builder.append("return false; ");
-    	builder.append(" });");
-//    	builder.append();
-//    	builder.append();
-    	builder.append("});");
     	builder.append("</script>");
 		
 		builder.append("</head>");
 		builder.append("<h1 id=\"title\">Prime Factor - version 27 </h1>");
 		builder.append("<br>");
-//		builder.append("<form enctype='multipart/form-data' action='/primeFactors/' method='get'>");
 		builder.append("<form enctype='multipart/form-data' >");
 		builder.append("<p id=\"invitation\">Insert a number</p>");
 		builder.append("<input  type=\"text\" id=\"number\" name=\"number\">");
 		builder.append(" <button id=\"go\">Go</button> ");
-		builder.append("<p id=\"result\"></p>");
+		builder.append("<div id=\"results\"></div>");
+		builder.append("<script type=\"text/javascript\">function ajax_get_json()</script>");
 		builder.append("</form>");
 		 builder.append("</html>");
 		
