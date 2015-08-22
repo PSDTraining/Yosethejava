@@ -53,8 +53,8 @@ public class Yose {
     	builder.append("function ajax_get_json(){ ");
     	builder.append("var results = document.getElementById(\"results\");");
     	builder.append("var hr = new XMLHttpRequest();");
-    	builder.append("hr.open(\"GET\", \"/primeFactors?number=20\", true);");
-    	builder.append("hr.setRequestHeader(\"Content-type\", \"application/json\", true);");
+    	builder.append("hr.open(\"GET\", \"/readme\", true);");
+//    	builder.append("hr.setRequestHeader(\"Content-type\", \"application/json\", true);");
     	builder.append(" hr.onreadystatechange = function() { ");
     	builder.append("if(hr.readyState == 4 && hr.status == 200) { ");
 //    	builder.append("var data = JSON.parse(hr.responseText); ");
@@ -69,7 +69,7 @@ public class Yose {
     	builder.append("</script>");
 		
 		builder.append("</head>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 45 </h1>");
+		builder.append("<h1 id=\"title\">Prime Factor - version 46 </h1>");
 		builder.append("<br>");
 		builder.append("<form enctype='multipart/form-data' >");
 		builder.append("<p id=\"invitation\">Insert a number</p>");
