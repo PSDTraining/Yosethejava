@@ -53,20 +53,18 @@ public class Yose {
     	builder.append("function ajax_get_json(){ ");
     	builder.append("var results = document.getElementById(\"results\");");
     	builder.append("var hr = new XMLHttpRequest();");
-    	builder.append("hr.open(\"GET\", \"/readme\", true);");
-//    	builder.append("hr.setRequestHeader(\"Content-type\", \"application/json\", true);");
-    	builder.append("hr.setRequestHeader(\"Content-type\", \"text/html\", true);");
+//    	builder.append("hr.open(\"GET\", \"/primeFactors?number=20\", true);");
+    	builder.append("hr.setRequestHeader(\"Content-type\", \"application/json\", true);");
     	builder.append(" hr.onreadystatechange = function() { ");
     	builder.append("if(hr.readyState == 4 && hr.status == 200) { ");
 //    	builder.append("var data = JSON.parse(hr.responseText); ");
     	builder.append("results.innerHTML = \"olaaaaaaaaaaa\"; ");
     	builder.append(" }");
     	builder.append(" }");
+    	builder.append("hr.open(\"GET\", \"/primeFactors?number=20\", true);");
     	builder.append("hr.send(); ");
     	builder.append("results.innerHTML = \"requesting...\"; ");
     	builder.append("}");
-    
-    	
     	builder.append("</script>");
 		
 		builder.append("</head>");
