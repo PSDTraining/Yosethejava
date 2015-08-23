@@ -54,7 +54,7 @@ public class Yose {
     	builder.append("var results = document.getElementById(\"result\");");
     	builder.append("var num = document.getElementById(\"number\").value;");
     	builder.append("var hr = new XMLHttpRequest();");
-    	builder.append("hr.open(\"GET\", \"/WebLoginApp/PrimeFactor?number=\"+num, true);");
+    	builder.append("hr.open(\"GET\", \"/yosejava.herokuapp.com/primeFactors?number=\"+num, true);");
     	builder.append("hr.setRequestHeader(\"Content-type\", \"application/json\", true);");
     	builder.append("hr.onreadystatechange = function() { ");
     	builder.append("if(hr.readyState == 4 && hr.status == 200) {");
@@ -76,7 +76,7 @@ public class Yose {
     
 		
 		builder.append("</head>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 47 </h1>");
+		builder.append("<h1 id=\"title\">Prime Factor - version 48 </h1>");
 		builder.append("<br>");
 		builder.append("<form  onsubmit=\"return false\">");
 		builder.append("<p id=\"invitation\">Insert a number</p>");
