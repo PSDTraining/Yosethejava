@@ -58,7 +58,7 @@ public class Yose {
 		builder.append("<input  type=\"text\" id=\"number\">");
 		builder.append(" <button id=\"go\" type=\"button\"  onclick=\"ajax_get_json()\">Go</button> ");
 		builder.append("</form>");
-		builder.append("<p id=\"result\"></p>");
+		builder.append("<p id=\"result\" name=\"result\"></p>");
 		builder.append("</body>");
 		
 		builder.append("<script>");
