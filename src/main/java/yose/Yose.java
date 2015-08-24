@@ -52,10 +52,10 @@ public class Yose {
 		
 		builder.append("</head>");
 		builder.append("<body>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 68 </h1>");
+		builder.append("<h1 id=\"title\">Prime Factor - version 69 </h1>");
 		builder.append("<form >");
 		builder.append("<p id=\"invitation\">Insert a number</p>");
-		builder.append("<input  type=\"text\" id=\"number\">");
+		builder.append("<input  type=\"text\" id=\"number\" name=\"number\" >");
 		builder.append(" <button id=\"go\" type=\"button\"  onclick=\"ajax_get_json()\">Go</button> ");
 		builder.append("<p id=\"result\" name=\"result\"></p>");
 		builder.append("</form>");
