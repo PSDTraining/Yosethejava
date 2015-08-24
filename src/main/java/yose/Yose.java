@@ -49,7 +49,7 @@ public class Yose {
     	StringBuilder builder = new StringBuilder();
     	builder.append("<html>");
     	builder.append("<head>");
-    	builder.append("<script>");
+    	builder.append("<script type=\"text/javascript\">");
     	builder.append("function ajax_get_json(){ ");
     	builder.append("var results = document.getElementById(\"result\");");
     	builder.append("var num = document.getElementById(\"number\").value;");
@@ -76,7 +76,7 @@ public class Yose {
     
 		
 		builder.append("</head>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 56 </h1>");
+		builder.append("<h1 id=\"title\">Prime Factor - version 57 </h1>");
 		builder.append("<br>");
 		builder.append("<form  onsubmit=\"return false\">");
 		builder.append("<p id=\"invitation\">Insert a number</p>");
