@@ -52,7 +52,7 @@ public class Yose {
 		
 		builder.append("</head>");
 		builder.append("<body>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 66 </h1>");
+		builder.append("<h1 id=\"title\">Prime Factor - version 67 </h1>");
 		builder.append("<form >");
 		builder.append("<p id=\"invitation\">Insert a number</p>");
 		builder.append("<input  type=\"text\" id=\"number\">");
