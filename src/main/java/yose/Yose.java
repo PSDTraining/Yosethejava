@@ -53,7 +53,7 @@ public class Yose {
 		
 		builder.append("</head>");
 		builder.append("<body>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 63 </h1>");
+		builder.append("<h1 id=\"title\">Prime Factor - version 64 </h1>");
 //		builder.append("<br>");
 //		builder.append("<form  onsubmit=\"return false\">");
 		builder.append("<form >");
@@ -75,14 +75,14 @@ public class Yose {
     	builder.append("hr.onreadystatechange = function() { ");
     	builder.append("if(hr.readyState == 4 && hr.status == 200) {");
     	builder.append("var data = JSON.parse(hr.responseText); ");
-    	builder.append("results.innerHTML =\"&#39;\"+data.number +\" = \"; ");
+    	builder.append("results.innerHTML =data.number +\" = \"; ");
     	builder.append("for(var obj in data.decomposition){");
     	builder.append("results.innerHTML +=  data.decomposition[obj];");
     	builder.append("if((parseInt(obj)+1) != data.decomposition.length){");
     	builder.append("results.innerHTML += \" x \";");
     	builder.append("}");
     	builder.append("}");
-    	builder.append("results.innerHTML +=\"&#39;\";");
+//    	builder.append("results.innerHTML +=\"&#39;\";");
     	builder.append("}");
     	builder.append("}; ");
     	builder.append("hr.send(); ");
