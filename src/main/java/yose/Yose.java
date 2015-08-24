@@ -53,15 +53,16 @@ public class Yose {
 		
 		builder.append("</head>");
 		builder.append("<body>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 59 </h1>");
-		builder.append("<br>");
-		builder.append("<form  onsubmit=\"return false\">");
+		builder.append("<h1 id=\"title\">Prime Factor - version 60 </h1>");
+//		builder.append("<br>");
+//		builder.append("<form  onsubmit=\"return false\">");
+		builder.append("<form >");
 		builder.append("<p id=\"invitation\">Insert a number</p>");
 		builder.append("<input  type=\"text\" id=\"number\">");
 //		builder.append(" <button id=\"go\" type=\"button\"  onclick=\"ajax_get_json()\">Go</button> ");
 		builder.append("</form>");
 		builder.append("<p id=\"result\"></p>");
-		builder.append("<script type=\"text/javascript\">function ajax_get_json()</script>");
+//		builder.append("<script type=\"text/javascript\">function ajax_get_json()</script>");
 		builder.append("</body>");
 		
 		builder.append("<script>");
