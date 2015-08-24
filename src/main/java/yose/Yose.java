@@ -49,20 +49,16 @@ public class Yose {
     	StringBuilder builder = new StringBuilder();
     	builder.append("<html>");
     	builder.append("<head>");
-//    	
 		
 		builder.append("</head>");
 		builder.append("<body>");
-		builder.append("<h1 id=\"title\">Prime Factor - version 65 </h1>");
-//		builder.append("<br>");
-//		builder.append("<form  onsubmit=\"return false\">");
+		builder.append("<h1 id=\"title\">Prime Factor - version 66 </h1>");
 		builder.append("<form >");
 		builder.append("<p id=\"invitation\">Insert a number</p>");
 		builder.append("<input  type=\"text\" id=\"number\">");
 		builder.append(" <button id=\"go\" type=\"button\"  onclick=\"ajax_get_json()\">Go</button> ");
 		builder.append("</form>");
 		builder.append("<p id=\"result\"></p>");
-//		builder.append("<script type=\"text/javascript\">function ajax_get_json()</script>");
 		builder.append("</body>");
 		
 		builder.append("<script>");
@@ -70,7 +66,7 @@ public class Yose {
     	builder.append("var results = document.getElementById(\"result\");");
     	builder.append("var num = document.getElementById(\"number\").value;");
     	builder.append("var hr = new XMLHttpRequest();");
-    	builder.append("hr.open(\"POST\", \"/primeFactors?number=\"+num, true);");
+    	builder.append("hr.open(\"GET\", \"/primeFactors?number=\"+num, true);");
     	builder.append("hr.setRequestHeader(\"Content-type\", \"application/json\", true);");
     	builder.append("hr.onreadystatechange = function() { ");
     	builder.append("if(hr.readyState == 4 && hr.status == 200) {");
@@ -82,7 +78,6 @@ public class Yose {
     	builder.append("results.innerHTML += \" x \";");
     	builder.append("}");
     	builder.append("}");
-//    	builder.append("results.innerHTML +=\"&#39;\";");
     	builder.append("}");
     	builder.append("}; ");
     	builder.append("hr.send(); ");
