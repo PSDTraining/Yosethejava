@@ -165,7 +165,7 @@ public class Yose {
 		builder.append("function click(id){");
 //		builder.append("background-color:red");
 		builder.append("alert(id);");		
-		builder.append("document.getElementById(id).className = \"safe\";");		
+		builder.append("document.getElementById(id).className = \"lost\";");		
 		builder.append("}");
 		builder.append("function load(){");
 //			
