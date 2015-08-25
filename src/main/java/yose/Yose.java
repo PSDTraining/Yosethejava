@@ -194,9 +194,9 @@ public class Yose {
     					builder.append(1);
                                 }else{
                                     builder.append(x+1);
-                                }    				
-    				builder.append("x");
-    				builder.append(y+1);
+                                    builder.append("x");
+                                    builder.append(y+1);
+                                }    				    				
     				builder.append("</td>");
     			}
     		builder.append("</tr>");
