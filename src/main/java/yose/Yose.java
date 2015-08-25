@@ -165,7 +165,7 @@ public class Yose {
 		builder.append("function click(id){");
 //		builder.append("background-color:red");
 		builder.append("alert(id);");		
-		builder.append("document.getElementById(id).className = \"lost\";");		
+		builder.append("document.getElementById(id).className = \"safe\";");		
 		builder.append("}");
 		builder.append("function load(){");
 //			
@@ -181,22 +181,22 @@ public class Yose {
     			int randomNumber = random.nextInt(8);
     			for(int y=0;y<array[x].length;y++){
     				builder.append("<td style=\"border:1px solid #c5c5c5;border-collapse:collapse\"");
-    				if((x+1)==4&&(y+1)==4){
+//    				if((x+1)==4&&(y+1)==4){
     					builder.append(" class=\"safe\" ");
-                                }
+//                                }
                                 builder.append(" onclick=\"click('cell-");
                                 builder.append((x+1)+ "x");
                                 builder.append((y+1)+"')\"");    				
     				builder.append(" id=\"cell-");
     				builder.append((x+1)+ "x");
     				builder.append((y+1)+ "\">");
-                                if((x+1)==4&&(y+1)==4){
+//                                if((x+1)==4&&(y+1)==4){
     					builder.append(1);
-                                }else{
-                                    builder.append(x+1);
-                                    builder.append("x");
-                                    builder.append(y+1);
-                                }    				    				
+//                                }else{
+//                                    builder.append(x+1);
+//                                    builder.append("x");
+//                                    builder.append(y+1);
+//                                }    				    				
     				builder.append("</td>");
     			}
     		builder.append("</tr>");
