@@ -178,12 +178,12 @@ public class Yose {
     			int randomNumber = random.nextInt(8);
     			for(int y=0;y<array[x].length;y++){
     				builder.append("<td style=\"border:1px solid #c5c5c5;border-collapse:collapse\"");
-    				if(randomNumber == (y+1)){
+    				//if(randomNumber == (y+1)){
 //    					builder.append(" class=\"lost\" ");
     					builder.append(" onclick=\"load('cell-");
     					builder.append((x+1)+ "x");
         				builder.append((y+1)+"')\"");
-    				}
+    				//}
     				builder.append(" id=\"cell-");
     				builder.append((x+1)+ "x");
     				builder.append((y+1)+ "\">");
