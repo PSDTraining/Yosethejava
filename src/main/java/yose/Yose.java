@@ -164,7 +164,8 @@ public class Yose {
 		builder.append("<script type=\"text/javascript\">");
 		builder.append("function click(id){");
 //		builder.append("background-color:red");	
-		builder.append("document.getElementById(id).className = \"lost\";");		
+		builder.append("document.getElementById(id).className = \"lost\";");	
+		builder.append("document.getElementById(id).className = \"safe\";");	
 		builder.append("}");
                 
                 builder.append("function safeClick(id){");
@@ -194,7 +195,7 @@ public class Yose {
                                 builder.append((y+1)+"');\"");    				
     				builder.append(" id=\"cell-");
     				builder.append((x+1)+ "x");
-    				builder.append((y+1)+ "\">&nbsp;");
+    				builder.append((y+1)+ "\">1");
 //                                if((x+1)==4&&(y+1)==4){
 //    					builder.append(1);
 //                                }else{
