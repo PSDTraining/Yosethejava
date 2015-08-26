@@ -165,12 +165,12 @@ public class Yose {
 		builder.append("function click(id){");
 //		builder.append("background-color:red");	
 		builder.append("document.getElementById(id).className = \"lost\";");	
-		builder.append("document.getElementById(id).className = \"safe\";");	
+//		builder.append("document.getElementById(id).className = \"safe\";");	
 		builder.append("}");
                 
                 builder.append("function safeClick(id){");
 //		builder.append("background-color:red");	
-//		builder.append("document.getElementById(id).className = \"safe\";");		
+		builder.append("document.getElementById(id).className = \"safe\";");		
 //		builder.append("document.getElementById(id).innerHTML = \"1\";");	
 		builder.append("}");
 		builder.append("function load(){");
