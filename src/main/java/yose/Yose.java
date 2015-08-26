@@ -169,8 +169,8 @@ public class Yose {
                 
                 builder.append("function safeClick(id){");
 //		builder.append("background-color:red");	
-		builder.append("document.getElementById(id).className = \"safe\";");		
-		builder.append("document.getElementById(id).innerHTML = \"1\";");	
+//		builder.append("document.getElementById(id).className = \"safe\";");		
+//		builder.append("document.getElementById(id).innerHTML = \"1\";");	
 		builder.append("}");
 		builder.append("function load(){");
 //			
@@ -185,7 +185,8 @@ public class Yose {
     		Random random = new Random();
     			int randomNumber = random.nextInt(8);
     			for(int y=0;y<array[x].length;y++){
-    				builder.append("<td style=\"border:1px solid #c5c5c5;border-collapse:collapse\"");
+    				builder.append("<td width=\"100px\" style=\"border:1px solid #c5c5c5;border-collapse:collapse\"");
+                                builder.append(" class=\"safe\"");
                                 builder.append(" onclick=\"click('cell-");
                                 builder.append((x+1)+ "x");
                                 builder.append((y+1)+"');safeClick('cell-");
